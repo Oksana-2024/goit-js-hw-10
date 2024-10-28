@@ -2,10 +2,9 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const numberInput = document.querySelector('.number-input');
-const button = document.querySelector('.creat-btn');
 const form = document.querySelector('form');
 
-button.addEventListener('click', event => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   const state = form.elements['state'].value;
   const delay = +numberInput.value;
