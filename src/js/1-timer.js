@@ -42,7 +42,7 @@ const options = {
         message: 'Please choose a date in the future',
         position: 'topRight',
         color: '#ef4040',
-        iconUrl: './img/x-octagon.png',
+        iconUrl: './goit-js-hw-10/img/x-octagon.png',
         messageColor: '#fff',
         theme: 'dark',
       });
