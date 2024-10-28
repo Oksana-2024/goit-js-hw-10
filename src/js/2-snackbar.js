@@ -14,15 +14,13 @@ button.addEventListener('click', event => {
   }
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      state === 'fulfilled'
-        ? resolve(`✅ Fulfilled promise in ${delay}ms`)
-        : reject(`❌ Rejected promise in ${delay}ms`);
+      state === 'fulfilled' ? resolve(delay) : reject(delay);
     }, delay);
   });
   promise
     .then(value => {
       iziToast.show({
-        message: value,
+        message: `✅ Fulfilled promise in ${value}ms`,
         messageSize: '20px',
         messageLineHeight: '1.5',
         position: 'topRight',
@@ -33,7 +31,7 @@ button.addEventListener('click', event => {
     })
     .catch(error => {
       iziToast.show({
-        message: error,
+        message: `❌ Rejected promise in ${error}ms`,
         position: 'topRight',
         messageSize: '20px',
         messageLineHeight: '1.5',
